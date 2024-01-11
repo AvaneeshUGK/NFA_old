@@ -1,0 +1,113 @@
+<mvc:View
+    controllerName="nfaarb.nfaarb.controller.Detail"
+    xmlns="sap.m"
+    displayBlock="true"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:l="sap.ui.layout"
+    xmlns:semantic="sap.f.semantic"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:core="sap.ui.core"
+    xmlns:p13n="sap.m.p13n"
+    xmlns:ce="sap.ui.codeeditor"
+    class="sapUiContentPadding"
+>
+    <Shell id="Shell">
+        <App
+            id="App1"
+            busy="{appView>/busy}"
+            class="sapUiSizeCompact"
+        >
+            <pages>
+                <Page
+                    id="Page1"
+                    title="{i18n>Vendor Comparision}"
+                >
+                    <Button
+                        id="Version21"
+                        type="Emphasized"
+                        text="Version"
+                        press=".fetchversion"
+                        class="butt1"
+                    />
+                    <Button
+                        id="Preview21"
+                        type="Emphasized"
+                        text="{i18n>Preview}"
+                        press=".onPreview"
+                        class="butt2"
+                    />
+                    <!-- <Button id="generateButton" text="Generate" press="printToPDF" /> -->
+<!-- <VBox id="_IDGenVBox1"> -->
+  <Button id="printButton" text="Generate" type="Emphasized" class="gen" press=".onGeneratePDF" />
+  <!-- Rest of your UI elements -->
+<!-- </VBox> -->
+
+                        <!-- <Button  id="generateButton" text="Generate" type="Emphasized" class="gen" press=".printToPDF" /> -->
+                    <Panel
+                        id="_IDGenPanel2"
+                        expandable="true"
+                        headerText="Questionnaire"
+                        width="auto"
+                        class="sapUiResponsiveMargin"
+                    >
+                        <Button
+                            id="button"
+                            icon="sap-icon://add"
+                            text="Add Questions"
+                            type="Emphasized"
+                            press=".onOpenDialog2"
+                        />
+
+                        <content>
+                            <Table
+                                id="Questions"
+                                growing="true"
+                                mode="SingleSelectMaster"
+                            />
+                        </content>
+                    </Panel>
+                    <!-- ========================= Details Table Panel  =====================  -->
+                    <Panel
+                        id="_IDGenPanel1"
+                        expandable="false"
+                        headerText="Details"
+                        width="auto"
+                        class="sapUiResponsiveMargin"
+                    >
+                        <Button
+                            id="button3"
+                            icon="sap-icon://add"
+                            text="Add New Row"
+                            type="Emphasized"
+                            press="onOpenDialog"
+                        />
+
+                        <content>
+                            <Table
+                                id="idMyTable"
+                                growing="true"
+                                class="myTable"
+                                mode="SingleSelectMaster"
+                                selectionChange=".onSelectionChange"
+                            />
+                        </content>
+                        <!-- <Button
+                                id="button4"
+                                icon="sap-icon://delete"
+                                type="Emphasized"
+                                press=".deleteRow"/> -->
+                    </Panel>
+
+                    <footer>
+                        <Toolbar
+                            id="Toolbar1"
+                            visible="{appView>/hasUIChanges}"
+                        >
+                            <ToolbarSpacer id="ToolbarSpacer1" />
+                        </Toolbar>
+                    </footer>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>

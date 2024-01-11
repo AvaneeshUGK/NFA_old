@@ -1,0 +1,206 @@
+/* Question */
+.customButton {
+  margin-top: 10px;
+  margin-left: 30px;
+}
+
+/* Detail */
+.dig {
+
+  position: relative;
+  left: 2.4cm;
+}
+
+.dig5 {
+
+  position: relative;
+  left: 40px;
+}
+
+.dig1 {
+
+  position: relative;
+  left: 15px;
+}
+
+.img {
+  position: relative;
+  left: 50px;
+}
+
+/* Version */
+.rates {
+  position: relative;
+  left: 100px;
+
+}
+
+.head,
+.base {
+  position: relative;
+  left: 60px;
+}
+
+.left {
+  position: relative;
+  left: -20px;
+}
+
+.statusButton.failed {
+  color: red;
+}
+
+.statusButton.success {
+  color: green;
+}
+
+.statusButton.pending {
+  color: orange;
+}
+
+.button {
+  position: relative;
+  left: 2.4cm;
+}
+
+.sapUiGlobalBusyIndicator {
+  z-index: 9999;
+}
+
+/* .myTable .sapMText {
+    text-transform: uppercase;
+  } */
+
+.myTable .sapMListTblHeaderCell .sapMText {
+  text-transform: uppercase;
+}
+
+.butt1 {
+  position: relative;
+  /* right: -31cm; */
+  margin-top: 10px;
+  /* margin: 0.9rem; */
+  margin-left: 35px;
+}
+
+
+
+.butt2 {
+  position: relative;
+  /* left: 27.4cm; */
+  margin-top: 10px;
+  /* margin: 0.9rem; */
+  margin-left: 20px;
+}
+
+.column-spacing {
+  padding: 0 10px;
+}
+
+
+.version {
+  border: 2px solid red;
+}
+
+
+.search {
+
+  position: relative;
+  left: 60px;
+
+}
+
+.note {
+  position: relative;
+  font-weight: bold;
+  left: 19px;
+  top: 38px;
+  margin-top: 1rem;
+
+
+
+}
+
+.submit {
+  position: relative;
+  /* font-weight: bold; */
+  left: 29cm;
+  margin-top: -48px;
+  /* margin-top: 1rem; */
+
+}
+
+.myCustomTextArea {
+  border: 1px solid black;
+  /* Add any desired border properties here */
+  position: relative;
+  left: 60px;
+}
+
+.dropdown {
+  margin-right: 100px;
+}
+
+.sapUiSmallMargin {
+  margin: 0.5rem;
+}
+
+.gridMargin {
+  margin-right: 10px;
+  /* Adjust the value as per your requirement */
+}
+
+
+.highlightGrid {
+  border: 2px solid red;
+}
+
+.redBorder {
+  border: 2px solid red;
+}
+
+
+
+.boldtext {
+
+
+  font-weight: bold;
+}
+
+.highlightColumn {
+  background: rgb(160, 208, 138);
+}
+
+.textbox {
+  margin-bottom: 310px;
+}
+
+.textbox1 {
+  margin-bottom: 340px;
+}
+
+.gen {
+  position: relative;
+  left: 15px;
+  margin-top: 10px;
+
+
+}
+
+/* Custom CSS class for center-aligned dialog title */
+.centeredDialogTitle {
+  text-align: 500px;
+}
+
+
+.myCustomDialog {
+  text-align: -webkit-center;
+  font-size: 1rem;
+  text-align: center;
+  height: 20%;
+  padding: 30px;
+  margin-top: 20px;
+  position: relative;
+  background: #ffffff;
+  font: bold;
+}

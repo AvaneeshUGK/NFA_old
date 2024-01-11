@@ -1,0 +1,27 @@
+<mvc:View
+    xmlns:core="sap.ui.core"
+    controllerName="nfaarb.nfaarb.controller.Version"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:grid="sap.ui.layout.cssgrid"
+    xmlns:f="sap.f"
+    displayBlock="true"
+    xmlns:l="sap.ui.layout"
+    xmlns:semantic="sap.f.semantic">
+       <VBox id="_IDGenVBox1">
+
+        <Table id="dynamicTable" growing="true" growingScrollToLoad="true">
+            <headerToolbar>
+                <Toolbar id="_IDGenToolbar1">
+                    <Title id="_IDGenTitle1" text="Version Price Comparison"/>
+                </Toolbar>
+            </headerToolbar>
+        </Table>
+
+        <!-- <Text id="_IDGenText9"  class="textbox"/> 
+        <ToolbarSpacer id="_IDGenToolbarSpacer1" />
+        <TextArea id="_IDGenTextArea1" value="{oJSONModel>/note}" placeholder="Add Note(optional)" width="80%" class="myCustomTextArea" />
+        <ToolbarSpacer id="_IDGenToolbarSpacer2" />
+        <Button id="_IDGenButton1" text="Submit" type="Emphasized" press=".submit" class="submit" /> -->
+    </VBox>
+</mvc:View>

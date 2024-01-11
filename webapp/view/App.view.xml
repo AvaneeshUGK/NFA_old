@@ -1,0 +1,68 @@
+<mvc:View controllerName="nfaarb.nfaarb.controller.App"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Shell id="Shell1">
+        <App id="app" class="sapUiSizeCompact">
+            <pages>
+                <Page id="page" title="Sourcing Event">
+                    <content>
+                        <Toolbar id="toolbar">
+                            <ToolbarSpacer id="toolbarSpacer"/>
+                            <SearchField id="SearchField1" width="20%" search=".onSearch" liveChange=".onSearchLiveChange" suggest=".onSearchSuggest" class="border"/>
+                                 <Button id="sortButton" icon="sap-icon://sort" press=".onSortPress" type="Transparent"/><!--  <SearchField id="SearchField1" width="20%" search=".onSearch" liveChange=".onSearchLiveChange" suggest=".onSuggest" />
+                               <SearchField id="SearchField1" width="20%" suggest=".onSuggest" liveChange=".onSearchLiveChange" /> -->
+                         
+                        </Toolbar> 
+                        <Table id="List" growing="true" growingThreshold="10" items="{oJSONModel>/}">
+                            <columns>
+                                <Column id="Column1">
+                                    <Text id="Itemname" text="Source Event Name"/>
+                                </Column>
+                                <Column id="Descrip">
+                                    <Text id="Description" text="Description"/>
+                                </Column>
+                                <Column id="Descrip1">
+                                    <Text id="Description1" text="Created By"/>
+                                </Column>
+                                <Column id="Descrip2">
+                                    <Text id="Description2" text="Status"/>
+                                </Column>
+                                <Column id="Descrip3">
+                                    <Text id="Description3" text="Version"/>
+                                </Column>
+                               
+                            </columns>
+                            <items>
+                                <ColumnListItem id="ColumnListItem1">
+                                    <cells>
+                                        <Link id="link" text="{oJSONModel>Srcevtname}" press=".onload" class="dig1"></Link>
+                                    </cells>
+                                    <cells>
+                                        <Text id="Text2" text="{oJSONModel>Desc}"/>
+                                    </cells>
+                                    <cells>
+                                        <Text id="Text3" text="{oJSONModel>Createdby}"/>
+                                    </cells>
+                                    <cells>
+                                        <ObjectStatus id="Status" text="{oJSONModel>status}" 
+                                            state="{= ${oJSONModel>status} === 'Completed' ? 'Success' : ${oJSONModel>status} === 'Draft' ? 'Error' : 'Warning'}"
+                                            icon="{= ${oJSONModel>status} === 'Completed' ? 'sap-icon://message-success' : ${oJSONModel>status} === 'Draft' ? 'sap-icon://message-error' : 'sap-icon://message-warning'}" />
+                                    </cells>
+                                    <cells>
+                                        <Button id="butt" text="{oJSONModel>Version}" press=".fetchversion" type="Emphasized"/>
+                                    </cells>
+                                </ColumnListItem>
+                            </items>
+                        </Table>
+                    </content>
+                    <footer>
+                        <Toolbar id="Toolbar1" visible="{appView>/hasUIChanges}">
+                            <ToolbarSpacer id="ToolbarSpacer1"/>
+                        </Toolbar>
+                    </footer>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>
